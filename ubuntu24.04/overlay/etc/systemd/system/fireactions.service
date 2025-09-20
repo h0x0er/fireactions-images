@@ -7,7 +7,6 @@ SuccessAction=reboot
 [Service]
 Type=simple
 User=root
-ExecStartPre=/scripts/mmds.sh fireactions
 ExecStart=/usr/bin/fireactions runner --log-level=info
 Restart=on-failure
 RestartSec=5s

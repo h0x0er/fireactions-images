@@ -24,7 +24,6 @@ fi
 # 4. Extract tar
 tar -xzf "$agent_tar"
 
-# COR=$(LC_ALL=C tr -dc A-Za-z0-9 </dev/urandom | head -c 16)
 
 # 5. Create /home/agent/agent.json.
 cat <<EOL >/home/agent/agent.json
@@ -33,8 +32,6 @@ cat <<EOL >/home/agent/agent.json
 "working_directory": "/opt/runner",
 "api_key": "123",
 "api_url": "https://int.api.stepsecurity.io/v1",
-"correlation_id" : "$COR",
-"is_github_hosted" : true
 }
 EOL
 
@@ -44,8 +41,5 @@ chmod +x /home/agent/agent
 # 7. Copy agent.service
 cp agent.service /etc/systemd/system/agent.service
 
-# 8. Enable and start the service.
-systemctl daemon-reload
-systemctl enable agent
-systemctl start agent
-echo "Step Security Job Correlation ID: $COR"
+# enable agent-service
+systemctl enable agent.service
