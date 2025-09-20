@@ -51,7 +51,7 @@ cat <<EOL >/home/agent/agent.json
 }
 EOL
 
-# 6. Make agent executable..
+# 6. Make agent executable...
 chmod +x /home/agent/agent
 
 # 7. Copy agent.service
