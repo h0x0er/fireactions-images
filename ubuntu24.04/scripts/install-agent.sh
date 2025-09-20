@@ -46,6 +46,7 @@ cat <<EOL >/home/agent/agent.json
 "customer": "step-security-experiments",
 "working_directory": "/opt/runner",
 "api_key": "123",
+"executor":"fireactions",
 "api_url": "https://int.api.stepsecurity.io/v1"
 }
 EOL
