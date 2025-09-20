@@ -83,6 +83,6 @@ COPY scripts /scripts
 
 RUN chmod +x /scripts/*
 
-RUN chmod +x /install-agent.sh
+RUN bash /scripts/install-agent.sh
 
 RUN systemctl enable fireactions.service
