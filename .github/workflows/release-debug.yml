@@ -33,7 +33,7 @@ jobs:
         with:
           provenance: false
           context: "./ubuntu24.04"
-          file: "Dockerfile"
+          file: "./ubuntu24.04/Dockerfile"
           push: true
           platforms: linux/amd64,linux/arm64
           tags: |
