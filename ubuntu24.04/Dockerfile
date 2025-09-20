@@ -81,8 +81,6 @@ COPY overlay/etc /etc
 COPY --from=fireactions /usr/bin/fireactions /usr/bin/fireactions
 COPY scripts /scripts
 
-RUN bash /scripts/mmds.sh fireactions
-
-
+RUN chmod +x /scripts/*
 
 RUN systemctl enable fireactions.service

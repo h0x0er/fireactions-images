@@ -35,6 +35,6 @@ jobs:
           context: "./ubuntu24.04"
           file: "./ubuntu24.04/Dockerfile"
           push: true
-          platforms: linux/amd64,linux/arm64
+          platforms: linux/amd64
           tags: |
             ghcr.io/h0x0er/fireactions-images:debug
