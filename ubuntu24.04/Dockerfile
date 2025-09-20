@@ -79,7 +79,7 @@ RUN echo "" > /etc/machine-id && echo "" > /var/lib/dbus/machine-id
 
 COPY overlay/etc /etc
 COPY --from=fireactions /usr/bin/fireactions /usr/bin/fireactions
-COPY ../scripts /scripts
+COPY scripts /scripts
 
 RUN bash /scripts/mmds.sh fireactions
 

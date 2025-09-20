@@ -32,7 +32,7 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           provenance: false
-          context: "."
+          context: "./ubuntu24.04"
           file: "./ubuntu24.04/Dockerfile"
           push: true
           platforms: linux/amd64,linux/arm64
